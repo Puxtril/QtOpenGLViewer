@@ -10,7 +10,7 @@
 #include <QColor>
 #include <QFont>
 #include <QObject>
-#include <QOpenGLFunctions>
+#include <QOpenGLFunctions_4_5_Core>
 #include <QOpenGLWidget>
 #include <QPainter>
 #include <QVector3D>
@@ -23,7 +23,7 @@
 /* --------------------------------------------------------------------------------
  * Graph viewer UI.
  * -------------------------------------------------------------------------------- */
-class QtOpenGLViewer : public QOpenGLWidget, protected QOpenGLFunctions
+class QtOpenGLViewer : public QOpenGLWidget, protected QOpenGLFunctions_4_5_Core
 {
     Q_OBJECT
     Q_PROPERTY(bool Is3D READ is3D WRITE setIs3D NOTIFY optionsChanged)
