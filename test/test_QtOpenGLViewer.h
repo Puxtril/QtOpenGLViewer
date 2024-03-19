@@ -14,7 +14,7 @@
 #ifdef MACX
 #   include <OpenGL/glu.h>
 #else
-#   include <glu.h>
+#   include <GL/glu.h>
 #endif
 
 class Sphere : public QObject
