@@ -7,13 +7,22 @@
 #ifndef __QtOpenGLViewer_H__
 #define __QtOpenGLViewer_H__
 
-#include <QColor>
-#include <QFont>
-#include <QObject>
-#include <QOpenGLFunctions_4_5_Core>
-#include <QOpenGLWidget>
-#include <QPainter>
-#include <QVector3D>
+#include <climits>
+#include <cmath>
+
+#include <QtGui/QColor>
+#include <QtGui/QFont>
+#include <QtCore/QObject>
+#include <QtOpenGL/QOpenGLFunctions_4_5_Core>
+#include <QtOpenGLWidgets/QOpenGLWidget>
+#include <QtWidgets/QMessageBox>
+#include <QtGui/QPainter>
+#include <QtGui/QVector3D>
+#include <QtGui/QMatrix4x4>
+#include <QtGui/QVector4D>
+#include <QtGui/QKeyEvent>
+#include <QtGui/QMouseEvent>
+#include <QtGui/QWheelEvent>
 
 #ifdef DEBUG
 #include <iostream>

@@ -4,16 +4,6 @@
 
 #include "QtOpenGLViewer.h"
 
-#include <climits>
-#include <cmath>
-
-#include <QKeyEvent>
-#include <QMatrix4x4>
-#include <QMessageBox>
-#include <QMouseEvent>
-#include <QVector4D>
-#include <QWheelEvent>
-
 QVector3D QtOpenGLViewer::screen2World(QVector3D screen, int *viewport, float *projection, float *modelview)
 {
     QMatrix4x4 P(projection);
