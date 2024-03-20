@@ -315,8 +315,8 @@ void QtOpenGLViewer::paintGL()
     float right = zoom / 2;
     float bottom = -zoom / 2;
     float top = zoom / 2;
-    float near = zoom / 100;
-    float far = zoom * 2;
+    float near2 = zoom / 100;
+    float far2 = zoom * 2;
     float aspect = float(width()) / height();
     if(aspect < 1) {
         bottom /= aspect;
@@ -327,7 +327,7 @@ void QtOpenGLViewer::paintGL()
     }
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(left, right, bottom, top, near, far);
+    glOrtho(left, right, bottom, top, near2, far2);
 
     // lookat
     QVector3D zhat = -camera.view().normalized();
