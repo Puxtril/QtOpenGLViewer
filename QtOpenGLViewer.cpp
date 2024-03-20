@@ -441,8 +441,8 @@ void QtOpenGLViewer::mouseMoveEvent(QMouseEvent *event)
     bool rotate = is3D() && (event->buttons() & Qt::RightButton);
     bool pan = event->buttons() & Qt::MiddleButton || (!is3D() && (event->buttons() & Qt::RightButton));
     if(rotate || pan) {
-        float dx = event->x() - _mousePosition.x();
-        float dy = -(event->y() - _mousePosition.y());
+        float dx = event->position().x() - _mousePosition.x();
+        float dy = -(event->position().y() - _mousePosition.y());
         _mousePosition = event->pos();
         QVector3D zhat = -camera.view().normalized();
         QVector3D xhat = QVector3D::crossProduct(camera.up, zhat).normalized();
