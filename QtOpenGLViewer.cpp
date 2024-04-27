@@ -104,9 +104,9 @@ float QtOpenGLViewer::luminance(const QColor &color)
     float r = color.redF();
     float g = color.greenF();
     float b = color.blueF();
-    if(r <= 0.03928) r /= 12.92; else r = pow((r + 0.055) / 1.055, 2.4);
-    if(g <= 0.03928) g /= 12.92; else g = pow((g + 0.055) / 1.055, 2.4);
-    if(b <= 0.03928) b /= 12.92; else b = pow((b + 0.055) / 1.055, 2.4);
+    if(r <= 0.03928F) r /= 12.92F; else r = pow((r + 0.055F) / 1.055F, 2.4F);
+    if(g <= 0.03928F) g /= 12.92F; else g = pow((g + 0.055F) / 1.055F, 2.4F);
+    if(b <= 0.03928F) b /= 12.92F; else b = pow((b + 0.055F) / 1.055F, 2.4F);
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
@@ -500,8 +500,8 @@ void QtOpenGLViewer::wheelEvent(QWheelEvent *event)
     }
     float zoom = camera.view().length();
     zoom += zoom * steps * mouseWheelSensitivity();
-    if(zoom < 1e-5) {
-        zoom = 1e-5;
+    if(zoom < 1e-5F) {
+        zoom = 1e-5F;
     }
     camera.zoom(zoom);
     repaint();

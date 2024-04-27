@@ -112,7 +112,7 @@ protected:
     
 protected:
     bool _is3D = true;
-    float _mouseWheelSensitivity = 0.2;
+    float _mouseWheelSensitivity = 0.2F;
     bool _swapMouseWheelZoomDirection = false;
     QColor _backgroundColor = QColor(200, 200, 200);
     QFont _hudFont = QFont("Sans", 10, QFont::Normal);
