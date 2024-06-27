@@ -9,6 +9,7 @@
 
 #include <climits>
 #include <cmath>
+#include <stdexcept>
 
 #include <QtGui/QColor>
 #include <QtGui/QFont>
